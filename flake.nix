@@ -27,7 +27,12 @@
         });
       shellInputs = with pkgs; [
         rust
-        nodejs
+        nodejs_18
+        nodePackages.yarn
+          # pkgs.yarn
+
+        nodePackages.typescript
+        nodePackages.typescript-language-server
         # rust-analyzer-unwrapped
       ];
       in
